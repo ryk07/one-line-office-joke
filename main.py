@@ -26,6 +26,8 @@ def output_path():
 
 
 def main():
+    if not 1 <= len(LINE) <= 200:
+        raise SystemExit("entry line must be 1 to 200 characters")
     path = output_path()
     parent = os.path.dirname(path)
     if parent:
